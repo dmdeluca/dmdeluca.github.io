@@ -1,12 +1,8 @@
 
-
 body {
   background-color: black;
 }
-h1 {
-  color: #E7DFDD;
-}
-p {
+* {
   color: #E7DFDD;
   font-family: arial,sans-serif;
 }
