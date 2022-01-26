@@ -28,6 +28,16 @@
         <li><a href="https://soundcloud.com/more-david-deluca" target="_blank">Additional SoundCloud</a> (external link)</li>
       </ul>
       </div>
+  <h3>Writings and Philosophy</h3>
+  <div>
+    <ul id="blog-list"></ul>
+
+  </div>
+  <p>
+    <?php
+  echo 'Test'
+  ?>
+</p>
 </body>
 
 </html>
