@@ -56,10 +56,9 @@
         }
 
         for (let writing of writings.sort((a, b) => b.date - a.date)) {
-          htmlString += `<li><a href="${writing.path}">${writing.name}</a> (updated ${writing.date.toLocaleDateString()})</li>`
+          document.getElementById('blog-list').innerHTML += `<li><a href="${writing.path}">${writing.name}</a> (updated ${writing.date.toLocaleDateString()})</li>`;
+          sleep(50);
         }
-
-        document.getElementById('blog-list').innerHTML = htmlString;
       })()
     </script>
   </div>
