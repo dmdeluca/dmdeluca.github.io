@@ -23,11 +23,11 @@
   </div>
   <h3>Music</h3>
   <div>
-      <ul>
-        <li><a href="https://soundcloud.com/davidmdeluca" target="_blank">SoundCloud</a> (external link)</li>
-        <li><a href="https://soundcloud.com/more-david-deluca" target="_blank">Additional SoundCloud</a> (external link)</li>
-      </ul>
-      </div>
+    <ul>
+      <li><a href="https://soundcloud.com/davidmdeluca" target="_blank">SoundCloud</a> (external link)</li>
+      <li><a href="https://soundcloud.com/more-david-deluca" target="_blank">Additional SoundCloud</a> (external link)</li>
+    </ul>
+  </div>
   <h3>Writings and Philosophy</h3>
   <div>
     <ul id="blog-list"></ul>
@@ -36,19 +36,33 @@
         const response = await fetch('https://api.github.com/repos/dmdeluca/dmdeluca.github.io/contents/docs/writings');
         const data = await response.json();
         let htmlString = '';
+
+        const writings = [];
+
         for (let file of data) {
 
-          const date = (await fetch(`https://api.github.com/repos/dmdeluca/dmdeluca.github.io/commits?path=${file.path}&page=1&per_page=1`)[0]).commit.author.date;
+          const dateResponse = (await fetch(`https://api.github.com/repos/dmdeluca/dmdeluca.github.io/commits?path=${file.path}&page=1&per_page=1`));
+          const date = (await dateResponse.json())[0].commit.author.date;
 
           const lower = file.name.toLowerCase().slice(1);
           const upper = file.name.toUpperCase().charAt(0);
-          const title = (upper + lower).replace(".html","").replace("_"," ");
-          htmlString += `<li><a href="/${file.path}">${title}</a> (updated ${date})</li>`;
+          const title = (upper + lower).replace(".html", "").replace("_", " ");
+
+          writings.push({
+            "date": new Date(date),
+            "path": file.path,
+            "name": title
+          });
         }
+
+        for (let writing of writings.sort((a, b) => b.date - a.date)) {
+          htmlString += `<li><a href="${writing.path}">${writing.name}</a> (updated ${writing.date.toLocaleDateString()})</li>`
+        }
+
         document.getElementById('blog-list').innerHTML = htmlString;
       })()
     </script>
-    </div>
+  </div>
 </body>
 
 </html>
