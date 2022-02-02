@@ -2,23 +2,30 @@
   color: #201d1d;
   font-weight: normal;
   font-family: Roboto,sans-serif;
-  line-height: 1.21;
   letter-spacing: 0.3px;
-    border-radius:5px;
 }
 
 i {
   letter-spacing: 0.2px;
 }
 
+.logoimage {
+  margin: 0px;
+  max-width: 100%;
+  margin-bottom: -25px;
+  z-index: 10;
+}
+
 .bigbox {
     margin: 10px 10px 10px 10px;
+    border-radius:5px;
 }
 
 .storycontent, .card {
     background-color:rgb(199, 190, 182);
     margin: 4px;
     padding: 10px;
+    border-radius:5px;
 }
 
 .shadow {
@@ -33,6 +40,7 @@ h1.storytitle {
 p {
   margin-top: 10px;
   font-style: normal;
+  line-height: 1.21;
 }
 
 body {
@@ -50,6 +58,21 @@ h2 {
   font-size: 16px;
 }
 
+.daviddeluca {
+  font-size: 45px;
+  letter-spacing: 10px;
+  margin: auto;
+  width: 75vw;
+  text-align: center;
+}
+
+hr {
+    border-color: rgb(124, 118, 111);
+    margin: 20px;
+    padding:0px;
+}
+
+
 h3 {
   font-style: italic;
   margin-top: 12px;
@@ -66,4 +89,5 @@ ul {
 h1, h2 {
   background: #746e6c;
   padding: 5px 5px 2px 5px;
+    border-radius:5px;
 }
