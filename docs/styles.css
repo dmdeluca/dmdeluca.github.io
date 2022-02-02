@@ -96,7 +96,7 @@ h1, h2 {
 }
 
 
-@media (max-width: 479px) {
+@media (max-width: 800px) {
     body {
         font-size: 18px;
     }
