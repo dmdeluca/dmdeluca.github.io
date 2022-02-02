@@ -113,6 +113,12 @@ h1, h2 {
         font-size: 20px;
         font-weight: bold;
     }
+    .daviddeluca {
+        font-size: 50px;
+    }
+    ul{
+        margin-left:0px;
+    }
     .logoimage {
         margin-left: -35%;
         margin-right: -35%;
