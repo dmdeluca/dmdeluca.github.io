@@ -11,7 +11,11 @@ i {
   letter-spacing: 0.2px;
 }
 
-.storycontent {
+.bigbox {
+    margin: 10px 10px 10px 10px;
+}
+
+.storycontent, .card {
     background-color:rgb(199, 190, 182);
     margin: 4px;
     padding: 10px;
@@ -21,9 +25,6 @@ i {
     box-shadow: 2px 2px 4px 0 rgb(124, 118, 111);
 }
 
-/* .storybox {
-    padding: 10px;
-} */
 
 h1.storytitle {
     margin: 4px;
