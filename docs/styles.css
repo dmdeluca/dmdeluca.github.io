@@ -29,11 +29,16 @@ i {
   background-color: rgb(199, 190, 182);
   margin: 4px;
   padding: 10px;
-  border-radius: 5px;
+}
+
+.card {
+    margin:16px 4px 16px 4px;
+    padding: 10px 10px 4px 18px;
+    border-radius: 30px;
 }
 
 .shadow {
-  box-shadow: 2px 2px 4px 0 rgb(124, 118, 111);
+  box-shadow: 1px 1px 4px 0 rgb(136, 129, 122);
 }
 
 h1.storytitle {
@@ -83,8 +88,8 @@ hr {
 }
 
 h3 {
-  font-style: italic;
-  margin-top: 12px;
+  margin-top: 4px;
+  margin-bottom:12px;
   font-weight: normal;
   font-size: 24px;
 }
@@ -95,11 +100,21 @@ ul {
   margin-top: -10px;
 }
 
+.footerlike {
+    margin:auto;
+    line-height: 1.1;
+    text-align: center;
+    width:fit-content;
+    padding: 10px;
+    border-radius:30px;
+    background-color: rgb(124, 118, 111);
+}
+
 h1,
 h2 {
   background: #746e6c;
   padding: 5px 5px 2px 5px;
-  border-radius: 5px;
+  border-radius: 30px;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -107,8 +122,8 @@ h2 {
   body {
     font-size: 18px;
     line-height: 1.6;
-    margin: 10px;
-    padding: 10px;
+    /* margin: 10px;
+    padding: 10px; */
   }
   h1 {
     font-size: 32px;
@@ -117,8 +132,8 @@ h2 {
     font-size: 24px;
   }
   h3 {
+      font-weight: bold;
     font-size: 20px;
-    font-weight: bold;
   }
   .daviddeluca {
     font-size: 50px;
@@ -131,14 +146,6 @@ h2 {
     margin-right: auto;
     margin-bottom: -10px;
     max-width: 100%;
-  }
-
-  .bigbox,
-  h1,
-  h2,
-  .storycontent,
-  .card {
-    border-radius: 15px;
   }
 
   h1,
