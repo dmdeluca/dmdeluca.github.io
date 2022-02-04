@@ -34,7 +34,7 @@ i {
 .card {
     margin:16px 4px 16px 4px;
     padding: 10px 10px 4px 18px;
-    border-radius: 30px;
+    border-radius: 18px;
 }
 
 .shadow {
@@ -58,12 +58,12 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+    font-size: 32px;
 }
 
 h2 {
   margin-top: 36px;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .daviddeluca {
@@ -89,9 +89,9 @@ hr {
 
 h3 {
   margin-top: 4px;
-  margin-bottom:12px;
-  font-weight: normal;
-  font-size: 24px;
+  margin-bottom:14px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 ul {
@@ -106,51 +106,13 @@ ul {
     text-align: center;
     width:fit-content;
     padding: 10px;
-    border-radius:30px;
+    border-radius:18px;
     background-color: rgb(124, 118, 111);
 }
 
 h1,
 h2 {
   background: #746e6c;
-  padding: 5px 5px 2px 5px;
-  border-radius: 30px;
-}
-
-@media only screen and (max-width: 1080px) {
-  p,
-  body {
-    font-size: 18px;
-    line-height: 1.6;
-    /* margin: 10px;
-    padding: 10px; */
-  }
-  h1 {
-    font-size: 32px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-      font-weight: bold;
-    font-size: 20px;
-  }
-  .daviddeluca {
-    font-size: 50px;
-  }
-  ul {
-    margin-left: 0px;
-  }
-  .logoimage {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -10px;
-    max-width: 100%;
-  }
-
-  h1,
-  h2 {
-    padding: 10px;
-    padding-left: 20px;
-  }
+  padding: 10px;
+  border-radius: 18px;
 }
