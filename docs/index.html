@@ -13,6 +13,7 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.7.1.min.js"
     ></script>
+    <script type="text/javascript" src="sectionCard.js"></script>
   </head>
 
   <body>
@@ -36,93 +37,97 @@
           hobbies and interests. On this site the user can find his writing,
           art, music, and other artifacts of his existence.
         </p>
-        <div class="card shadow">
-          <h3>Social Media</h3>
-          <div>
-            <ul>
-              <li>
-                <a
-                  href="https://www.instagram.com/_daviddeluca/"
-                  target="_blank"
-                  >Instagram</a
-                >, which features pictures of David's home-cooked meals
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/daviddelucadraws/"
-                  target="_blank"
-                  >Instagram</a
-                >, where features drawings and livestreams
-              </li>
-              <li>
-                <a href="https://twitch.tv/thedaviddeluca" target="_blank"
-                  >Twitch</a
-                >, home to David's OpenRCT2 gameplay
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="card shadow">
-          <h3>Music</h3>
-          <div>
-            <ul>
-              <li>
-                <a href="https://soundcloud.com/davidmdeluca" target="_blank"
-                  >SoundCloud</a
-                >
-                (external link)
-              </li>
-              <li>
-                <a
-                  href="https://soundcloud.com/more-david-deluca"
-                  target="_blank"
-                  >Additional SoundCloud</a
-                >
-                (external link)
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="card shadow">
-          <h3>Writings and Philosophy</h3>
-          <div>
-            <ul id="blog-list">
-              <li>
-                <a href="writings/darwin-and-tom-part-7.html">Darwin and Tom</a>
-                (part 7)
-              </li>
-              <li>
-                <a href="writings/darwin-and-tom-part-4.html">Darwin and Tom</a>
-                (part 4)
-              </li>
-              <li>
-                <a href="writings/darwin-and-tom-part-5.html">Darwin and Tom</a>
-                (part 5)
-              </li>
-              <li><a href="writings/introduction.html">Introduction</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="card shadow">
-          <h3>Friendsites</h3>
-          <div>
-            <ul>
-              <li>
-                <a href="https://www.kencamacho.com" target="_blank"
-                  >Ken Camacho</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footerlike">
-        This website is hosted as a collection of static pages on Github. See my
-        <a href="https://github.com/dmdeluca/dmdeluca.github.io">source code</a
-        >.
-      </div>
-      </div>
 
-      
+        <template id="section-card">
+          <div class="card shadow">
+            <h3 class="section-card-header"></h3>
+            <div>
+              <ul class="section-card-list"></ul>
+            </div>
+          </div>
+        </template>
+
+        <template id="section-card-list-item">
+          <li>
+            <a class="link" href="" target=""></a
+            ><span class="inactiveText"></span>
+          </li>
+        </template>
+
+        <div id="section-cards"></div>
+
+        <script type="text/javascript">
+          // populates the section cards with their contents
+          $("#section-cards")[0].appendChild(createSectionCard("Social Media", [{
+                url: "https://www.instagram.com/_daviddeluca/",
+                target: "_blank",
+                active: "Instagram",
+                inactive: ", which features pictures of David's home-cooked meals"
+            }, {
+                url: "https://www.instagram.com/daviddelucadraws/",
+                target: "_blank",
+                active: "Instagram",
+                inactive: ", where features drawings and livestreams"
+            }, {
+                url: "https://twitch.tv/thedaviddeluca",
+                target: "_blank",
+                active: "Twitch",
+                inactive: ", home to David's OpenRCT2 gameplay"
+            }]));
+
+          $("#section-cards")[0].appendChild(createSectionCard("Music", [
+              {
+                url: "https://soundcloud.com/davidmdeluca",
+                target: "_blank",
+                active: "SoundCloud",
+                inactive: " (external link)",
+              },{
+                url: "https://soundcloud.com/more-david-deluca",
+                target: "_blank",
+                active: "Additional SoundCloud",
+                inactive: " (external link)",
+            }]));
+
+          $("#section-cards")[0].appendChild(
+            createSectionCard("Writings and Philosophy", [
+              {
+                url: "writings/darwin-and-tom-part-7.html",
+                target: "_blank",
+                active: "Darwin and Tom (part 7)",
+              },
+              {
+                url: "writings/darwin-and-tom-part-4.html",
+                target: "_blank",
+                active: "Darwin and Tom (part 4)",
+              },
+              {
+                url: "writings/darwin-and-tom-part-5.html",
+                target: "_blank",
+                active: "Darwin and Tom (part 5)",
+              },
+              {
+                url: "writings/introduction.html",
+                target: "_blank",
+                active: "Introduction",
+            }]));
+
+          $("#section-cards")[0].appendChild(
+            createSectionCard("Friendsites", [{
+                url: "https://www.kencamacho.com",
+                target: "_blank",
+                active: "Ken Camacho",
+                inactive: " (the greatest site ever)"
+            }]));
+        </script>
+
+        <div class="footerlike">
+          This website is hosted as a collection of static pages on Github. See
+          my
+          <a href="https://github.com/dmdeluca/dmdeluca.github.io"
+            >source code</a
+          >.
+        </div>
+      </div>
     </div>
   </body>
 </html>
